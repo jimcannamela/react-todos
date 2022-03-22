@@ -20,4 +20,4 @@ and for the list of `todos` (an array of objects) is
 
 ## Refactor
 
-Refactor to use the appropriate React Hook to get this to work. During this refactor, the following hooks may make their way into the project: `useState`, `useReducer`, `useContext`, and/or `useEffect`.
+Refactor to use the appropriate React Hook to get this to work. During this refactor, the following hooks may make their way into the project: `useState`, `useReducer`, `useContext`, `useEffect`, and/or `useRef`.
