@@ -8,7 +8,7 @@ function NewToDo(props) {
                 New Item:
                 <input type="text" name="name" onChange={ props.onChange }/>
             </label>
-            <input type="submit" value="Submit"/>
+            <input type="submit" value="Submit" onClick={(e) => props.onSubmit(e)}/>
         </form>
     </div>
   );
