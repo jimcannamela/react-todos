@@ -1,27 +1,26 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import NewToDo from './components/NewToDo';
 import ToDoList from './components/ToDoList';
 
 function App() {
-  let todos = [
+  let initialToDos = [
     { name: 'laundry' },
     { name: 'buy groceries' },
     { name: 'mow lawn' }
   ]
 
-  let currentItem = {
-    name: ''
-  }
-
+  const [todos, setToDos] = useState(initialToDos);
+  const [currentItem, setCurrentItem] = useState({name: ''});
+  
   const handleChange = (e) => {
-    currentItem =  { name: e.target.value }
+    setCurrentItem({ name: e.target.value });   
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    todos.push(currentItem);
-    currentItem = { name: '' }
+    e.preventDefault(); 
+    setToDos([...todos, currentItem]); 
+    setCurrentItem({ name: '' });
   }
 
   return (
