@@ -19,9 +19,11 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
+    if (e.target.name.value !== '') {
     setToDos([...todos, currentItem]); 
     setCurrentItem({name: ''});
     e.target.name.value='';
+  }
   }
 
   return (
