@@ -2,13 +2,11 @@ import React from 'react';
 
 function NewToDo(props) {
   return (
-    <div>
+    <div className='NewToDo'>
         <form onSubmit={ props.onSubmit }>
-            <label>
-                New Item:
-                <input type="text" name="name" onChange={ props.onChange }/>
-            </label>
-            <input type="submit" value="Submit" onClick={(e) => props.onSubmit(e)}/>
+            <label>New Item:</label>
+            <input type="text" name="name" onChange={ props.onChange }/>
+            <input type="submit" value="Submit"/>
         </form>
     </div>
   );

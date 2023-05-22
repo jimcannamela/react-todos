@@ -14,13 +14,14 @@ function App() {
   const [currentItem, setCurrentItem] = useState({name: ''});
   
   const handleChange = (e) => {
-    setCurrentItem({ name: e.target.value });   
+    setCurrentItem({ name: e.target.value }); 
   }
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
     setToDos([...todos, currentItem]); 
-    setCurrentItem({ name: '' });
+    setCurrentItem({name: ''});
+    e.target.name.value='';
   }
 
   return (
